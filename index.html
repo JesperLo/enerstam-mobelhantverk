@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Möbelhantverk | Rustik Elegans</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #2b1e14;
+      --dark: #2a241e;
+      --accent: #7a5a3a;
+      --soft: #cbbfae;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: var(--bg);
+      background-image: linear-gradient(rgba(43,30,20,0.92), rgba(43,30,20,0.92)), url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #f2ede6;
+      line-height: 1.8;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(rgba(244,241,236,0.9), rgba(244,241,236,0.9)), url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+      background-size: cover;
+      background-position: center;
+    }
+
+    header h1 {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      margin-bottom: 1rem;
+      color: #4a2a1a; /* mahogny */
+      text-shadow:
+        0 2px 0 rgba(255,255,255,0.18),
+        0 6px 12px rgba(0,0,0,0.55),
+        0 14px 28px rgba(0,0,0,0.45);
+    }
+
+    header p {
+      font-size: 1.25rem;
+      max-width: 620px;
+      font-style: italic;
+      color: #5b3322; /* mahogny ljusare */
+      text-shadow:
+        0 2px 0 rgba(255,255,255,0.15),
+        0 5px 10px rgba(0,0,0,0.45),
+        0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.18em;
+      color: #c7a77b;
+      text-transform: uppercase;
+    }
+
+    .about {
+      background-color: rgba(30,20,14,0.85);
+      border: 1px solid #5a4028;
+      padding: 3.5rem;
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+    }
+
+    .divider {
+      width: 80px;
+      height: 2px;
+      background-color: var(--accent);
+      margin: 2rem 0;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 0.2rem;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: #f4f1ec;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+    }
+
+        .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border: 1px solid var(--soft);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+      border-radius: 3px;
+    }
+
+    .gallery figure {
+      background-color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .gallery figure.centered {
+      grid-column: 1 / -1;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .gallery figure.centered img {
+      width: 100%;
+      height: auto;
+    }
+
+    .gallery figcaption {
+      margin-top: 0.8rem;
+      font-size: 0.9rem;
+      font-style: italic;
+      color: #5a4a3a;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enerstam<br>möbelhantverk</h1>
+    <p>Rustik formgivning med exklusiv känsla – handgjorda möbler skapade med tid, precision och respekt för materialet.</p>
+  </header>
+
+  <section>
+    <div class="about">
+      <h2>Om Hantverket</h2>
+      <div class="divider"></div>
+      <p>
+        Varje möbel formas för hand med fokus på hållbarhet, naturliga material och tidlös design. 
+        Inspirerad av nordisk tradition och rustik elegans skapas unika möbler som åldras vackert och bär sin egen historia.
+      </p>
+    </div>
+  </section>
+
+ <section>
+    <h2>Utvalda Möbelverk</h2>
+    <div class="divider"></div>
+    <div class="gallery">
+      <figure>
+        <img src="bilder/mobel-1.jpg" alt="Handgjort soffbord i massivträ">
+        <figcaption>Skoställ i exklusivt mahogny – handgjorda detaljer</figcaption>
+      </figure>
+      <figure>
+        <img src="bilder/mobel-2.jpg" alt="Bänk i trä med skulptural form">
+        <figcaption>fotpall jävla konstig</figcaption>
+      </figure>
+      <figure>
+        <img src="bilder/mobel-3.jpg" alt="Detalj av träfog och ben">
+        <figcaption>Runt bord med levande ådring</figcaption>
+      </figure>
+      <figure class="centered">
+        <img src="bilder/mobel-4.jpg" alt="Runt bord med levande ådring">
+        <figcaption>Sen tar vi lite sill på det</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="contact">
+    <h2>Kontakt</h2>
+    <div class="divider" style="margin: 2rem auto;"></div>
+    <p>För beställningar och förfrågningar</p>
+    <p style="margin-top: 1rem;">
+      <a href="mailto:enerstam@gmail.com">enerstam@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Möbelhantverk · Handgjort med omsorg
+  </footer>
+
+</body>
+</html>
