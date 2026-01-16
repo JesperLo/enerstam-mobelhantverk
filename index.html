@@ -313,7 +313,12 @@
   <h2>Projekt</h2>
   <div class="divider"></div>
 
-  <div class="gallery">
+  <div style="
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+">
+
 
     <figure>
       <img src="bilder/projekt-1.jpg" alt="Projekt 1">
@@ -345,10 +350,10 @@
       <figcaption>runt bord igen</figcaption>
     </figure>
 
-    <figure class="project-wide">
-      <img src="bilder/projekt-7.jpg" alt="Projekt 7">
-      <figcaption>Tar vi lite sill på det</figcaption>
-    </figure>
+    <figure style="grid-column:1 / -1;">
+  <img src="bilder/projekt-7.jpg" alt="Projekt 7" style="width:100%;">
+  <figcaption>Tar vi lite sill på det</figcaption>
+</figure>
 
     
   </div>
@@ -387,6 +392,7 @@
 </main>
 </body>
 </html>
+
 
 
 
