@@ -314,50 +314,97 @@
   <div class="divider"></div>
 
   <div style="
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
-">
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.5rem;
+  ">
 
-
-    <figure>
-      <img src="bilder/projekt-1.jpg" alt="Projekt 1">
-      <figcaption>konstig pall</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-1.jpg" alt="Projekt 1" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Konstig pall i massiv ek
+      </figcaption>
     </figure>
 
-    <figure>
-      <img src="bilder/projekt-2.jpg" alt="Projekt 2">
-      <figcaption>runt bord</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-2.jpg" alt="Projekt 2" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Runt matbord i oljad björk
+      </figcaption>
     </figure>
 
-    <figure>
-      <img src="bilder/projekt-3.jpg" alt="Projekt 3">
-      <figcaption>Bänk i återvunnet virke med rustik patina</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-3.jpg" alt="Projekt 3" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Bänk i återvunnet virke med patina
+      </figcaption>
     </figure>
 
-    <figure>
-      <img src="bilder/projekt-4.jpg" alt="Projekt 4">
-      <figcaption>konstig pall igen</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-4.jpg" alt="Projekt 4" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Handgjord pall – rå och ärlig
+      </figcaption>
     </figure>
 
-    <figure>
-      <img src="bilder/projekt-5.jpg" alt="Projekt 5">
-      <figcaption>inzoomat runt bord</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-5.jpg" alt="Projekt 5" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Detaljstudie av bordsskiva
+      </figcaption>
     </figure>
 
-    <figure>
-      <img src="bilder/projekt-6.jpg" alt="Projekt 6">
-      <figcaption>runt bord igen</figcaption>
+    <figure style="position:relative; overflow:hidden;">
+      <img src="bilder/projekt-6.jpg" alt="Projekt 6" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        opacity:0; transition:opacity 0.4s ease;">
+        Runt bord – andra vinkeln
+      </figcaption>
     </figure>
 
-    <figure style="grid-column:1 / -1;">
-  <img src="bilder/projekt-7.jpg" alt="Projekt 7" style="width:100%;">
-  <figcaption>Tar vi lite sill på det</figcaption>
-</figure>
+    <!-- FULLBREDD -->
+    <figure style="grid-column:1 / -1; position:relative; overflow:hidden;">
+      <img src="bilder/projekt-7.jpg" alt="Projekt 7" style="width:100%; display:block;">
+      <figcaption style="position:absolute; inset:0; background:rgba(43,30,20,0.85); color:#f2ede6;
+        display:flex; align-items:center; justify-content:center; text-align:center;
+        font-family:'Playfair Display', serif;
+        font-size:1.2rem;
+        opacity:0; transition:opacity 0.4s ease;">
+        Tar vi lite sill på det
+      </figcaption>
+    </figure>
 
-    
   </div>
 </section>
+
+<script>
+  document.querySelectorAll("#projekt figure").forEach(fig => {
+    fig.addEventListener("mouseenter", () => {
+      fig.querySelector("figcaption").style.opacity = "1";
+    });
+    fig.addEventListener("mouseleave", () => {
+      fig.querySelector("figcaption").style.opacity = "0";
+    });
+  });
+</script>
+
 
 <section id="mobelfakta" class="page">
   <h2>Möbelfakta</h2>
@@ -392,6 +439,7 @@
 </main>
 </body>
 </html>
+
 
 
 
