@@ -8,24 +8,23 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Playfair+Display:wght@400;600&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
 
-<!-- Font Awesome (IKONER) -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-/* ===== GLOBALT ===== */
+/* ===== RESET ===== */
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{max-width:100%;overflow-x:hidden;}
+img{max-width:100%;display:block;height:auto;}
+
+/* ===== FÄRGER ===== */
 :root{
   --bg:#2b1e14;
-  --dark:#2a241e;
   --accent:#7a5a3a;
+  --sand:#d2c3aa;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
-
-html,body{
-  max-width:100%;
-  overflow-x:hidden;
-}
-
+/* ===== BODY ===== */
 body{
   font-family:'Playfair Display',serif;
   background:linear-gradient(rgba(43,30,20,.92),rgba(43,30,20,.92)),
@@ -33,25 +32,23 @@ body{
   background-size:cover;
   background-attachment:fixed;
   color:#f2ede6;
-  line-height:1.8;
+  line-height:1.7;
 }
 
-img{max-width:100%;height:auto;display:block;}
-
-/* ===== MENY ===== */
+/* ===== NAV ===== */
 nav{
   position:fixed;
   top:0;left:0;
   width:220px;
   height:100vh;
   background:rgba(58,38,24,.96);
-  padding:2.5rem 1.5rem;
+  padding:2.4rem 1.5rem;
 }
 
 nav a{
   display:block;
   font-family:'Cinzel',serif;
-  color:#d2c3aa;
+  color:var(--sand);
   text-decoration:none;
   margin-bottom:1.6rem;
   letter-spacing:.22em;
@@ -63,7 +60,7 @@ nav a:hover{color:#c7a77b;}
 
 main{margin-left:240px;}
 
-/* ===== START ===== */
+/* ===== HEADER ===== */
 header{
   min-height:100vh;
   display:flex;
@@ -80,12 +77,13 @@ header{
 header h1{
   font-family:'Cinzel Decorative',serif;
   font-size:3rem;
-  letter-spacing:.25em;
+  letter-spacing:.18em;
   color:#4a2a1a;
+  max-width:100%;
 }
 
 header p{
-  max-width:600px;
+  max-width:580px;
   margin-top:2rem;
   font-style:italic;
   color:#5b3322;
@@ -113,18 +111,14 @@ h2{
   max-width:600px;
   height:2px;
   background:var(--accent);
-  margin:1.5rem auto 2rem;
+  margin:1.5rem auto 2.2rem;
 }
 
-/* ===== UTVALDA ===== */
+/* ===== FEATURED ===== */
 .featured-gallery{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:1.5rem;
-}
-
-.featured-gallery img{
-  border:6px solid #fff;
 }
 
 /* ===== PROJEKT ===== */
@@ -137,6 +131,7 @@ h2{
 .project-grid figure{
   position:relative;
   overflow:hidden;
+  cursor:pointer;
 }
 
 .project-grid figcaption{
@@ -146,37 +141,42 @@ h2{
   display:flex;
   align-items:center;
   justify-content:center;
+  text-align:center;
+  padding:1.2rem;
   opacity:0;
-  transition:.4s;
+  transition:.35s ease;
 }
 
 .project-grid figure:hover figcaption{opacity:1;}
+.project-grid figure.active figcaption{opacity:1;}
 
-.project-grid .full{
-  grid-column:1/-1;
-}
+.project-grid .full{grid-column:1/-1;}
 
 /* ===== KONTAKT ===== */
 .contact-row{
   display:flex;
+  align-items:center;
   justify-content:center;
-  gap:.8rem;
+  gap:.7rem;
   margin-bottom:1.4rem;
   font-size:1.1rem;
 }
 
 .contact-row i{
   color:#9b7650;
+  font-size:1.1rem;
+  line-height:1;
 }
 
 .contact-row a{
   color:#9b7650;
   text-decoration:none;
+  line-height:1;
 }
 
 /* ===== FOOTER ===== */
 footer{
-  background:var(--dark);
+  background:#2a241e;
   text-align:center;
   padding:2rem;
   font-size:.9rem;
@@ -195,7 +195,7 @@ footer{
     justify-content:center;
     flex-wrap:wrap;
     gap:1rem;
-    padding:1rem;
+    padding:1.2rem;
   }
 
   nav a{
@@ -207,14 +207,17 @@ footer{
 
   main{margin-left:0;}
 
+  header h1{
+    font-size:2.1rem;
+    letter-spacing:.12em;
+  }
+
   .featured-gallery,
   .project-grid{
     grid-template-columns:1fr;
   }
 
-  .project-grid .full{
-    grid-column:auto;
-  }
+  .project-grid .full{grid-column:auto;}
 }
 </style>
 </head>
@@ -223,7 +226,6 @@ footer{
 
 <nav>
   <a href="#start">Start</a>
-  <a href="#om-oss">Om oss</a>
   <a href="#projekt">Projekt</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
@@ -234,16 +236,6 @@ footer{
   <h1>Enerstam<br>Möbelhantverk</h1>
   <p>Rustik formgivning med exklusiv känsla – handgjort med respekt för materialet.</p>
 </header>
-
-<section class="featured">
-  <h2>Utvalda möbelverk</h2>
-  <div class="divider"></div>
-  <div class="featured-gallery">
-    <img src="bilder/mobel-1.jpg">
-    <img src="bilder/mobel-2.jpg">
-    <img src="bilder/mobel-3.jpg">
-  </div>
-</section>
 
 <section id="projekt" class="page">
   <h2>Projekt</h2>
@@ -285,5 +277,17 @@ footer{
 </footer>
 
 </main>
+
+<script>
+/* TAP = HOVER PÅ MOBIL */
+document.querySelectorAll('.project-grid figure').forEach(fig=>{
+  fig.addEventListener('click',()=>{
+    document.querySelectorAll('.project-grid figure')
+      .forEach(f=>f.classList.remove('active'));
+    fig.classList.add('active');
+  });
+});
+</script>
+
 </body>
 </html>
