@@ -1,245 +1,222 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enerstam Möbelhantverk</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enerstam Möbelhantverk</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Playfair+Display:wght@400;600&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome (IKONER) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
-    :root {
-      --bg:#2b1e14;
-      --accent:#7a5a3a;
-      --sand:#d2c3aa;
-      --dark:#2a241e;
-    }
+<style>
+/* ===== GLOBALT ===== */
+:root{
+  --bg:#2b1e14;
+  --dark:#2a241e;
+  --accent:#7a5a3a;
+}
 
-    * { box-sizing:border-box; margin:0; padding:0; }
+*{box-sizing:border-box;margin:0;padding:0;}
 
-    body {
-      font-family:'Playfair Display', serif;
-      background:
-        linear-gradient(rgba(43,30,20,.92),rgba(43,30,20,.92)),
-        url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');
-      background-size:cover;
-      background-attachment:fixed;
-      color:#f2ede6;
-      line-height:1.8;
-    }
+html,body{
+  max-width:100%;
+  overflow-x:hidden;
+}
 
-    /* NAV */
-    nav {
-      position:fixed;
-      inset:0 auto 0 0;
-      width:220px;
-      padding:2.5rem 1.5rem;
-      background:
-        linear-gradient(rgba(58,38,24,.94),rgba(58,38,24,.94)),
-        url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');
-      border-right:1px solid #5a4028;
-    }
+body{
+  font-family:'Playfair Display',serif;
+  background:linear-gradient(rgba(43,30,20,.92),rgba(43,30,20,.92)),
+  url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4');
+  background-size:cover;
+  background-attachment:fixed;
+  color:#f2ede6;
+  line-height:1.8;
+}
 
-    nav a {
-      display:block;
-      font-family:'Cinzel', serif;
-      color:var(--sand);
-      text-decoration:none;
-      margin-bottom:1.8rem;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      font-size:.85rem;
-      transition:all .35s ease;
-      opacity:.85;
-    }
+img{max-width:100%;height:auto;display:block;}
 
-    nav a:hover {
-      color:#c7a77b;
-      letter-spacing:.32em;
-      transform:translateX(4px);
-      opacity:1;
-    }
+/* ===== MENY ===== */
+nav{
+  position:fixed;
+  top:0;left:0;
+  width:220px;
+  height:100vh;
+  background:rgba(58,38,24,.96);
+  padding:2.5rem 1.5rem;
+}
 
-    main { margin-left:240px; }
+nav a{
+  display:block;
+  font-family:'Cinzel',serif;
+  color:#d2c3aa;
+  text-decoration:none;
+  margin-bottom:1.6rem;
+  letter-spacing:.22em;
+  font-size:.85rem;
+  text-transform:uppercase;
+}
 
-    /* START */
-    header {
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      background:
-        linear-gradient(rgba(244,241,236,.9),rgba(244,241,236,.9)),
-        url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
-      background-size:cover;
-      padding:2rem;
-    }
+nav a:hover{color:#c7a77b;}
 
-    header h1 {
-      font-family:'Cinzel Decorative', serif;
-      font-size:3rem;
-      letter-spacing:.25em;
-      color:#4a2a1a;
-      text-shadow:0 6px 12px rgba(0,0,0,.5);
-    }
+main{margin-left:240px;}
 
-    header p {
-      margin-top:2.6rem;
-      max-width:620px;
-      font-family:'Libre Baskerville', serif;
-      font-style:italic;
-      font-weight:300;
-      color:#5b3322;
-      text-shadow:0 2px 6px rgba(0,0,0,.35);
-    }
+/* ===== START ===== */
+header{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:2rem;
+  background:linear-gradient(rgba(244,241,236,.9),rgba(244,241,236,.9)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');
+  background-size:cover;
+}
 
-    section {
-      max-width:1000px;
-      margin:auto;
-      padding:5rem 2rem;
-      text-align:center;
-    }
+header h1{
+  font-family:'Cinzel Decorative',serif;
+  font-size:3rem;
+  letter-spacing:.25em;
+  color:#4a2a1a;
+}
 
-    .page { display:none; }
-    .page:target { display:block; animation:fade .5s ease; }
+header p{
+  max-width:600px;
+  margin-top:2rem;
+  font-style:italic;
+  color:#5b3322;
+}
 
-    @keyframes fade { from{opacity:0} to{opacity:1} }
+/* ===== SEKTIONER ===== */
+section{
+  padding:5rem 1.5rem;
+  max-width:1000px;
+  margin:auto;
+  text-align:center;
+}
 
-    h2 {
-      font-family:'Cinzel', serif;
-      letter-spacing:.18em;
-      color:#c7a77b;
-      margin-bottom:1.5rem;
-    }
+.page{display:none;}
+.page:target{display:block;}
 
-    .divider {
-      width:100%;
-      max-width:600px;
-      height:2px;
-      background:var(--accent);
-      margin:0 auto 2rem;
-    }
+h2{
+  font-family:'Cinzel',serif;
+  letter-spacing:.18em;
+  color:#c7a77b;
+}
 
-    /* FEATURED */
-    .featured { text-align:center; }
-    .featured-gallery {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.5rem;
-    }
+.divider{
+  width:100%;
+  max-width:600px;
+  height:2px;
+  background:var(--accent);
+  margin:1.5rem auto 2rem;
+}
 
-    .featured-gallery img {
-      width:100%;
-      border:6px solid #fff;
-      box-shadow:0 10px 25px rgba(0,0,0,.35);
-    }
+/* ===== UTVALDA ===== */
+.featured-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
 
-    /* PROJEKT */
-    .gallery {
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:1.5rem;
-    }
+.featured-gallery img{
+  border:6px solid #fff;
+}
 
-    .gallery figure {
-      position:relative;
-      overflow:hidden;
-      background:#fff;
-    }
+/* ===== PROJEKT ===== */
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
 
-    .gallery img {
-      width:100%;
-      display:block;
-      transition:transform .6s ease, filter .6s ease;
-    }
+.project-grid figure{
+  position:relative;
+  overflow:hidden;
+}
 
-    .gallery figcaption {
-      position:absolute;
-      inset:0;
-      background:rgba(43,30,20,.85);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#f2ede6;
-      font-size:1rem;
-      opacity:0;
-      transition:opacity .4s ease;
-      padding:1.2rem;
-    }
+.project-grid figcaption{
+  position:absolute;
+  inset:0;
+  background:rgba(43,30,20,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:.4s;
+}
 
-    .gallery figure:hover img {
-      transform:scale(1.06);
-      filter:brightness(.9);
-    }
+.project-grid figure:hover figcaption{opacity:1;}
 
-    .gallery figure:hover figcaption { opacity:1; }
+.project-grid .full{
+  grid-column:1/-1;
+}
 
-    .gallery .wide { grid-column:1 / -1; }
+/* ===== KONTAKT ===== */
+.contact-row{
+  display:flex;
+  justify-content:center;
+  gap:.8rem;
+  margin-bottom:1.4rem;
+  font-size:1.1rem;
+}
 
-    /* KONTAKT */
-    .contact-row {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:.7rem;
-      margin-bottom:1.4rem;
-      font-size:1.2rem;
-    }
+.contact-row i{
+  color:#9b7650;
+}
 
-    .contact-row i {
-      color:#9b7650;
-    }
+.contact-row a{
+  color:#9b7650;
+  text-decoration:none;
+}
 
-    .contact-row a {
-      color:#9b7650;
-      text-decoration:none;
-      border-bottom:1px solid #000;
-      transition:all .35s ease;
-      opacity:.85;
-    }
+/* ===== FOOTER ===== */
+footer{
+  background:var(--dark);
+  text-align:center;
+  padding:2rem;
+  font-size:.9rem;
+}
 
-    .contact-row a:hover {
-      color:#c7a77b;
-      border-color:#c7a77b;
-      letter-spacing:.12em;
-      transform:translateX(4px);
-      opacity:1;
-    }
+/* ===== MOBIL ===== */
+@media(max-width:768px){
 
-    footer {
-      background:var(--dark);
-      text-align:center;
-      padding:2rem;
-      font-size:.9rem;
-    }
+  body{background-attachment:scroll;}
 
-    /* MOBIL */
-    @media (max-width:768px) {
-      body { background-attachment:scroll; }
-      nav {
-        position:relative;
-        width:100%;
-        height:auto;
-        display:flex;
-        justify-content:center;
-        gap:1.4rem;
-        padding:1.2rem .5rem;
-        border-right:none;
-        border-bottom:1px solid #5a4028;
-      }
-      nav a { margin:0; font-size:.7rem; }
-      main { margin-left:0; }
-      .featured-gallery,
-      .gallery { grid-template-columns:1fr; }
-    }
-  </style>
+  nav{
+    position:relative;
+    width:100%;
+    height:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:1rem;
+    padding:1rem;
+  }
+
+  nav a{
+    margin:0;
+    font-size:.7rem;
+    letter-spacing:.12em;
+    white-space:nowrap;
+  }
+
+  main{margin-left:0;}
+
+  .featured-gallery,
+  .project-grid{
+    grid-template-columns:1fr;
+  }
+
+  .project-grid .full{
+    grid-column:auto;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -248,19 +225,19 @@
   <a href="#start">Start</a>
   <a href="#om-oss">Om oss</a>
   <a href="#projekt">Projekt</a>
-  <a href="#mobelfakta">Möbelfakta</a>
   <a href="#kontakt">Kontakt</a>
 </nav>
 
 <main>
 
 <header id="start">
-  <h1>Enerstam<br>möbelhantverk</h1>
-  <p>Rustik formgivning med exklusiv känsla – handgjorda möbler skapade med tid, precision och respekt för materialet.</p>
+  <h1>Enerstam<br>Möbelhantverk</h1>
+  <p>Rustik formgivning med exklusiv känsla – handgjort med respekt för materialet.</p>
 </header>
 
-<section class="featured" id="featured">
+<section class="featured">
   <h2>Utvalda möbelverk</h2>
+  <div class="divider"></div>
   <div class="featured-gallery">
     <img src="bilder/mobel-1.jpg">
     <img src="bilder/mobel-2.jpg">
@@ -268,30 +245,19 @@
   </div>
 </section>
 
-<section id="om-oss" class="page">
-  <h2>Om oss</h2>
-  <div class="divider"></div>
-  <p>Livet som möbelsnickare har alltid handlat om respekt för materialet, tiden och hantverket. Enerstam Bluff &amp; Båg AB växte fram ur ett behov av att arbeta långsamt, ärligt och nära materialet. Varje möbel bär spår av händerna som format den.</p>
-</section>
-
 <section id="projekt" class="page">
   <h2>Projekt</h2>
   <div class="divider"></div>
-  <div class="gallery">
-    <figure><img src="bilder/projekt-1.jpg"><figcaption>Konstig pall</figcaption></figure>
-    <figure><img src="bilder/projekt-2.jpg"><figcaption>Runt bord</figcaption></figure>
-    <figure><img src="bilder/projekt-3.jpg"><figcaption>Bänk i återvunnet virke</figcaption></figure>
-    <figure><img src="bilder/projekt-4.jpg"><figcaption>Pall i massiv ek</figcaption></figure>
-    <figure><img src="bilder/projekt-5.jpg"><figcaption>Detaljstudie</figcaption></figure>
-    <figure><img src="bilder/projekt-6.jpg"><figcaption>Runt bord – vinkel</figcaption></figure>
-    <figure class="wide"><img src="bilder/projekt-7.jpg"><figcaption>Tar vi lite sill på det</figcaption></figure>
-  </div>
-</section>
 
-<section id="mobelfakta" class="page">
-  <h2>Möbelfakta</h2>
-  <div class="divider"></div>
-  <p>Idag samarbetar vi med möbelhantverkare runt om i hela Sverige. Vår ambition är att bevara den svenska snickeritraditionen genom en kombination av silvertejp och dåliga fogar. Vi stoltserar mer än gärna med våra oslipade limkanter och 60° vinklar.</p>
+  <div class="project-grid">
+    <figure><img src="bilder/projekt-1.jpg"><figcaption>Pall i massiv ek</figcaption></figure>
+    <figure><img src="bilder/projekt-2.jpg"><figcaption>Runt matbord</figcaption></figure>
+    <figure><img src="bilder/projekt-3.jpg"><figcaption>Bänk i återvunnet trä</figcaption></figure>
+    <figure><img src="bilder/projekt-4.jpg"><figcaption>Handgjord pall</figcaption></figure>
+    <figure><img src="bilder/projekt-5.jpg"><figcaption>Detaljstudie</figcaption></figure>
+    <figure><img src="bilder/projekt-6.jpg"><figcaption>Andra vinkeln</figcaption></figure>
+    <figure class="full"><img src="bilder/projekt-7.jpg"><figcaption>Specialprojekt</figcaption></figure>
+  </div>
 </section>
 
 <section id="kontakt" class="page">
@@ -299,23 +265,23 @@
   <div class="divider"></div>
 
   <div class="contact-row">
-    <i class="fab fa-instagram"></i>
-    <a href="https://www.instagram.com/mobelhantverk/">@mobelhantverk</a>
+    <i class="fa-brands fa-instagram"></i>
+    <a href="#">@mobelhantverk</a>
   </div>
 
   <div class="contact-row">
-    <i class="fas fa-phone"></i>
+    <i class="fa-solid fa-phone"></i>
     <a href="tel:+46733185531">+46 73-318 55 31</a>
   </div>
 
   <div class="contact-row">
-    <i class="fas fa-envelope"></i>
+    <i class="fa-solid fa-envelope"></i>
     <a href="mailto:enerstam@gmail.com">enerstam@gmail.com</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Enerstam Möbelhantverk · Handgjort med Bluff och båg
+© 2026 Enerstam Möbelhantverk
 </footer>
 
 </main>
